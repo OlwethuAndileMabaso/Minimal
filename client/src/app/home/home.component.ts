@@ -360,6 +360,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         this.router.navigate([destination]);//, this.ID]);
     }
 
+    onOpenEditor() {
+        this.router.navigate(['/editor']);
+    }
+
+    onOpenLab() {
+        this.router.navigate(['/lab']);
+    }
+
     private loadHmi() {
         let hmi = this.projectService.getHmi();
         if (hmi) {

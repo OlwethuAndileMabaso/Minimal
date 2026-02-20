@@ -229,4 +229,80 @@
         transition:  top 300ms;
         z-index: 999;
     }
+
+    // ── Minimal-PLC Launch Banner ─────────────────────────
+    .mp-launch-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: var(--mp-primary-lt, #EFF6FF);
+      border: 1px solid var(--mp-border, #E2E8F0);
+      border-radius: var(--mp-r-card, 12px);
+      padding: 20px 28px;
+      margin: 16px 16px 0 16px;
+      box-shadow: var(--mp-shadow-card, 0 1px 3px rgba(0,0,0,0.08));
+
+      .mp-launch-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .mp-launch-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--mp-primary, #2563EB);
+        letter-spacing: -0.3px;
+      }
+
+      .mp-launch-subtitle {
+        font-size: 13px;
+        color: var(--mp-text-muted, #64748B);
+        font-weight: 400;
+      }
+
+      .mp-launch-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .mp-btn-open-editor {
+        background-color: var(--mp-primary, #2563EB) !important;
+        color: #fff !important;
+        border-radius: 999px !important;
+        padding: 0 24px !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        height: 48px !important;
+        box-shadow: 0 2px 8px rgba(37,99,235,0.25) !important;
+        gap: 8px;
+
+        mat-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .mp-btn-open-lab {
+        background-color: var(--mp-surface, #F5F6FA) !important;
+        color: var(--mp-primary, #2563EB) !important;
+        border-radius: 999px !important;
+        border: 1.5px solid var(--mp-primary, #2563EB) !important;
+        padding: 0 24px !important;
+        font-weight: 500 !important;
+        font-size: 14px !important;
+        height: 48px !important;
+        gap: 8px;
+
+        mat-icon {
+          font-size: 18px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
 }

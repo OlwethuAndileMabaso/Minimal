@@ -113,6 +113,24 @@
 				</div>
 			</div>
 		</div>
+		<!-- ── Minimal-PLC: Quick Launch Banner ── -->
+		<div class="mp-launch-banner">
+		  <div class="mp-launch-content">
+		    <span class="mp-launch-title">⚡ Minimal-PLC</span>
+		    <span class="mp-launch-subtitle">Industrial SCADA / HMI Platform</span>
+		  </div>
+		  <div class="mp-launch-actions">
+		    <button mat-raised-button color="primary" class="mp-btn-open-editor" (click)="onOpenEditor()">
+		      <mat-icon>edit</mat-icon>
+		      Open Editor
+		    </button>
+		    <button mat-raised-button class="mp-btn-open-lab" (click)="onOpenLab()">
+		      <mat-icon>science</mat-icon>
+		      Open Lab
+		    </button>
+		  </div>
+		</div>
+		<!-- ── end launch banner ── -->
 		<div id="container"  [ngClass]="showNavigation?'home-container-nav':'home-container'" #container (click)="checkToCloseSideNav()">
 			<ng-container *ngIf="!showHomeLink && homeView">
 				<ng-container [ngSwitch]="homeView.type">

@@ -1,0 +1,132 @@
+// =============================================
+// Minimal-PLC Design System — Global Tokens
+// =============================================
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  // Colors
+  --mp-bg:           #FFFFFF;
+  --mp-surface:      #F5F6FA;
+  --mp-border:       #E2E8F0;
+  --mp-primary:      #2563EB;
+  --mp-primary-lt:   #EFF6FF;
+  --mp-success:      #10B981;
+  --mp-warning:      #F59E0B;
+  --mp-danger:       #EF4444;
+  --mp-text:         #0F172A;
+  --mp-text-muted:   #64748B;
+
+  // Shape
+  --mp-r-pill:  999px;
+  --mp-r-card:  12px;
+  --mp-r-input: 8px;
+  --mp-r-modal: 16px;
+
+  // Shadows
+  --mp-shadow-card:    0 1px 3px rgba(0,0,0,0.08);
+  --mp-shadow-drop:    0 4px 20px rgba(0,0,0,0.12);
+  --mp-shadow-modal:   0 8px 40px rgba(0,0,0,0.16);
+
+  // Typography
+  --mp-font: 'Inter', 'Roboto', sans-serif;
+}
+
+// ── Apply font globally ──────────────────────────────
+* {
+  font-family: var(--mp-font) !important;
+}
+
+// ── Pill buttons ─────────────────────────────────────
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-flat-button,
+.mat-mdc-outlined-button,
+.mat-button,
+.mat-raised-button,
+.mat-flat-button {
+  border-radius: var(--mp-r-pill) !important;
+  padding: 0 24px !important;
+  font-weight: 500 !important;
+  min-height: 44px !important;
+  letter-spacing: 0 !important;
+}
+
+// ── Cards ────────────────────────────────────────────
+.mat-mdc-card,
+.mat-card {
+  border-radius: var(--mp-r-card) !important;
+  box-shadow: var(--mp-shadow-card) !important;
+  border: 1px solid var(--mp-border) !important;
+  background-color: var(--mp-bg) !important;
+}
+
+// ── Toolbar ──────────────────────────────────────────
+.mat-toolbar,
+.mat-mdc-toolbar {
+  background-color: var(--mp-bg) !important;
+  color: var(--mp-text) !important;
+  border-bottom: 1px solid var(--mp-border) !important;
+  box-shadow: var(--mp-shadow-card) !important;
+}
+
+// ── Inputs ───────────────────────────────────────────
+.mat-mdc-form-field,
+.mat-form-field {
+  .mdc-notched-outline__leading,
+  .mdc-notched-outline__notch,
+  .mdc-notched-outline__trailing {
+    border-radius: var(--mp-r-input) !important;
+  }
+}
+
+// ── Chip / filter pills ──────────────────────────────
+.mat-mdc-chip,
+.mat-chip {
+  border-radius: var(--mp-r-pill) !important;
+}
+
+// ── Menus / dropdowns ────────────────────────────────
+.mat-mdc-menu-panel,
+.mat-menu-panel {
+  border-radius: var(--mp-r-card) !important;
+  box-shadow: var(--mp-shadow-drop) !important;
+}
+
+// ── Dialog / modal ────────────────────────────────────
+.mat-mdc-dialog-container,
+.mat-dialog-container {
+  border-radius: var(--mp-r-modal) !important;
+  box-shadow: var(--mp-shadow-modal) !important;
+}
+
+// ── Sidenav ───────────────────────────────────────────
+.mat-sidenav {
+  background-color: var(--mp-surface) !important;
+  border-right: 1px solid var(--mp-border) !important;
+}
+
+// ── Primary color overrides ───────────────────────────
+.mat-primary .mat-mdc-button,
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-flat-button.mat-primary {
+  background-color: var(--mp-primary) !important;
+  color: #fff !important;
+}
+
+// ── Page background ───────────────────────────────────
+body, html, app-root {
+  background-color: var(--mp-surface) !important;
+}
+
+// ── Touch targets ─────────────────────────────────────
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+// ── Launcher FAB (existing ngx-fab-button) ────────────
+// Make the existing FAB use primary blue and pill shape
+.fab-button {
+  --fab-color: var(--mp-primary) !important;
+}
